@@ -1,0 +1,43 @@
+hadoop version
+// Print the Hadoop version
+
+hadoop fs -df hdfs:/ 
+//Report the amount of space used and
+
+
+hadoop fs -count hdfs:/ 
+//Count the number of directories,files and bytes under # the paths that match the specified file pattern
+
+hadoop fsck - / 
+//Run a DFS filesystem checking utility 
+
+
+hadoop balancer 
+//Run a cluster balancing utility 
+
+
+hadoop fs -mkdir /hadoop 
+// Create a new directory named "hadoop" below
+
+
+hadoop fs -put data/sample.txt /user/training/hadoop
+//Add a sample text file from the local directory # named "data" to the new directory you created in HDFS
+
+hadoop fs -ls /hadoop
+//List the contents of this new directory in HDFS.
+
+hadoop fs -put data/retail /hadoop 
+//Add the entire local directory called "retail" to the # /user/training directory in HDFS
+
+hadoop fs -du -s -h hadoop/retail 
+//See how much space this directory occupies in HDFS.
+
+hadoop fs -rm hadoop/retail/customers
+//Delete a file 'customers' from the "retail" directory.
+
+hadoop fs -expunge
+//To empty the trash 
+
+hadoop fs -cat hadoop/purchases.txt 
+//To view the contents of your text file purchases.txt 
+
